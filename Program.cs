@@ -22,22 +22,29 @@ namespace Gaming
                 combatship combat = new combatship();
                 //  foo.ProcessSpaceship(cargo);
                 // foo.ProcessSpaceship(combat);
-                Spaceship[] s = new Spaceship[4];
-                s[0] = new combatship();
-                s[1] = new cargoship();
-                s[2] = new cargoship();
-                s[3] = new combatship();
-                for(int i  = 0; i < 4; i++)
+                Spaceship[] s = new Spaceship[4];//creating an array of type Spaceship
+               //// s[0] = new combatship();
+               // s[1] = new cargoship();
+               // s[2] = new cargoship();
+               ////// s[3] = new combatship();
+               //// for(int i  = 0; i < 4; i++)
+               //// {
+               ////     s[i].LaserHit();
+               //// }
+                int[] vs = new int[] { 1, 2, 3, 4, 5 };
+                int sum = 0;
+                foreach ( int i in vs)//foreach loop 
                 {
-                    s[i].LaserHit();
+                    sum = sum + i;
                 }
+                Console.WriteLine(sum);
 
                 //creating a multi-dimensional  array
                 int[,] array2d;
                 int[,,] array3d;
                 array2d = new int[5, 5];
                 array3d = new int[5, 5, 3];
-
+                f
                 //accessing the arrays
                 array2d[0, 0] = 100; //the top left box
                 array3d[2, 2, 1] = 400; // the middle cube
@@ -54,7 +61,7 @@ namespace Gaming
                     arry2d[j] = new int[5];
                 }
                 arry2d[0][0] = 100;
-                Console.WriteLine(arry2d);
+               Console.WriteLine(arry2d[0][0]);
 
                 if (laser == "HIT CARGO")
                 {
