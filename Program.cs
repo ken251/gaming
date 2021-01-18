@@ -132,6 +132,7 @@ namespace Gaming
         {
             Console.Write("ken");
             Console.WriteLine("New");
+            Console.Write("final");
             
         }
     }
