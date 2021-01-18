@@ -88,7 +88,7 @@ namespace Gaming
     }
     abstract public  class Spaceship
     {
-         abstract public  void LaserHit();
+        abstract public  void LaserHit();
         //{
         //    Console.WriteLine("Hit and run");
         //}
@@ -108,13 +108,13 @@ namespace Gaming
     {
         static void ProcessSpaceship( Spaceship s)//passing a parameter of type spaceship to a function
         {
-            s.LaserHit();
+           // s.LaserHit();
             Console.WriteLine("destroy all space craft");
         }
     }
     interface ISpaceship
     {
-      //  void Laserhit();
+       void Laserhit();
     };
     class cargoship : ISpaceship//inherits ISpaceshp interface..
         //basically does the same purpose as any other class that inherits from spaceship class
@@ -130,6 +130,7 @@ namespace Gaming
         //still using the interface ISpaceship...it is a child class of the combatship
         override public void LaserHit()
         {
+            Console.Write("ken");
             
         }
     }
