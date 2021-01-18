@@ -23,14 +23,19 @@ namespace Gaming
                 //  foo.ProcessSpaceship(cargo);
                 // foo.ProcessSpaceship(combat);
                 Spaceship[] s = new Spaceship[4];//creating an array of type Spaceship
-               //// s[0] = new combatship();
-               // s[1] = new cargoship();
-               // s[2] = new cargoship();
-               ////// s[3] = new combatship();
-               //// for(int i  = 0; i < 4; i++)
-               //// {
-               ////     s[i].LaserHit();
-               //// }
+                                                 //// s[0] = new combatship();
+                                                 // s[1] = new cargoship();
+                                                 // s[2] = new cargoship();
+                                                 ////// s[3] = new combatship();
+                                                 //// for(int i  = 0; i < 4; i++)
+                                                 //// {
+                                                 ////     s[i].LaserHit();
+                                                 //// }
+                ISpaceship p = new combatship();
+                p.LaserHit();  //calls combatshp.LaserHit
+                p = new AdvancedCombatship();
+                p.LaserHit();  //  still calls combatship.LaserHit
+
                 int[] vs = new int[] { 1, 2, 3, 4, 5 };
                 int sum = 0;
                 foreach ( int i in vs)//foreach loop 
@@ -51,7 +56,7 @@ namespace Gaming
                 //creating a multi-dimensional array in the java way.
 
                 int[][] arry2d;
-                int[][][] arry3d;
+                //int[][][] arry3d;
                 // intialising the arrays in ths way is a bit trciky
 
                 arry2d = new int[5][];
@@ -114,7 +119,7 @@ namespace Gaming
     class cargoship : ISpaceship//inherits ISpaceshp interface..
         //basically does the same purpose as any other class that inherits from spaceship class
     {
-        public void LaserHit()
+      virtual public void LaserHit()
         {
             // throw new NotImplementedException();
             Console.WriteLine("Cargo damged");
@@ -123,7 +128,7 @@ namespace Gaming
     class AdvancedCombatship : combatship
     {
         //still using the interface ISpaceship...it is a child class of the combatship
-        new public void LaserHit()
+        override public void LaserHit()
         {
             
         }
