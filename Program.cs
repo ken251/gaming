@@ -130,10 +130,7 @@ namespace Gaming
         //still using the interface ISpaceship...it is a child class of the combatship
         override public void LaserHit()
         {
-            Console.Write("ken");
-            Console.WriteLine("New");
-            Console.Write("final");
-            
+            //some code
         }
     }
 }
