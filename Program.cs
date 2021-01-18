@@ -17,8 +17,8 @@ namespace Gaming
                 laser = laser.ToUpper();
                 //  Spaceship s = new Spaceship();
                 Spaceship c = new combatship();
-                Spaceship k = new cargoship();
-                cargoship cargo = new cargoship();
+                cargoship k = new cargoship();
+                cargoship cargo = new cargoship();//converted to create an instance of cargoship class
                 combatship combat = new combatship();
                 //  foo.ProcessSpaceship(cargo);
                 // foo.ProcessSpaceship(combat);
@@ -44,7 +44,6 @@ namespace Gaming
                 int[,,] array3d;
                 array2d = new int[5, 5];
                 array3d = new int[5, 5, 3];
-                f
                 //accessing the arrays
                 array2d[0, 0] = 100; //the top left box
                 array3d[2, 2, 1] = 400; // the middle cube
@@ -82,13 +81,12 @@ namespace Gaming
             }
         }
     }
-   public class Spaceship
+    abstract public  class Spaceship
     {
-        public virtual
-            void LaserHit()
-        {
-            Console.WriteLine("Hit and run");
-        }
+         abstract public  void LaserHit();
+        //{
+        //    Console.WriteLine("Hit and run");
+        //}
 
     }
     class combatship : Spaceship
@@ -100,20 +98,34 @@ namespace Gaming
             //less damage
         }
     }
-    class cargoship : Spaceship
-    {
-        public override void LaserHit()
-        {
-           // throw new NotImplementedException();
-            Console.WriteLine("Cargo damged");
-        }
-    }
+  
     class foo
     {
-        static void ProcessSpaceship( Spaceship s)
+        static void ProcessSpaceship( Spaceship s)//passing a parameter of type spaceship to a function
         {
             s.LaserHit();
             Console.WriteLine("destroy all space craft");
+        }
+    }
+    interface ISpaceship
+    {
+      //  void Laserhit();
+    };
+    class cargoship : ISpaceship//inherits ISpaceshp interface..
+        //basically does the same purpose as any other class that inherits from spaceship class
+    {
+        public void LaserHit()
+        {
+            // throw new NotImplementedException();
+            Console.WriteLine("Cargo damged");
+        }
+    }
+    class AdvancedCombatship : combatship
+    {
+        //still using the interface ISpaceship...it is a child class of the combatship
+        new public void LaserHit()
+        {
+            
         }
     }
 }
