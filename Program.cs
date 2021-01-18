@@ -131,6 +131,7 @@ namespace Gaming
         override public void LaserHit()
         {
             Console.Write("ken");
+            Console.WriteLine("New");
             
         }
     }
