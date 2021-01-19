@@ -17,7 +17,7 @@ namespace Gaming
                 laser = laser.ToUpper();
                 //  Spaceship s = new Spaceship();
                 Spaceship c = new combatship();
-                cargoship k = new cargoship();
+                CargoshipX k = new CargoshipX();
                 cargoship cargo = new cargoship();//converted to create an instance of cargoship class
                 combatship combat = new combatship();
                 //  foo.ProcessSpaceship(cargo);
@@ -31,11 +31,9 @@ namespace Gaming
                                                  //// {
                                                  ////     s[i].LaserHit();
                                                  //// }
-                ISpaceship p = new combatship();
-                p.LaserHit();  //calls combatshp.LaserHit
-                p = new AdvancedCombatship();
-                p.LaserHit();  //  still calls combatship.LaserHit
-
+                ISpaceship p = new cargoship();              
+                p = new AdvancedCargoship();
+              
                 int[] vs = new int[] { 1, 2, 3, 4, 5 };
                 int sum = 0;
                 foreach ( int i in vs)//foreach loop 
@@ -73,6 +71,15 @@ namespace Gaming
                 }else if (laser == "HIT")
                 {
                     c.LaserHit();
+
+
+                }else if (laser == "DESTRO")
+                {
+                    p.spacelaser();//  still calls combatship.spacelaser
+                }
+                else if (laser == "TRIAL")
+                {
+                    p.spacelaser();  //calls combatshp.spacelaser
                 }
                 else
                 {
@@ -86,51 +93,16 @@ namespace Gaming
             }
         }
     }
-    abstract public  class Spaceship
-    {
-        abstract public  void LaserHit();
-        //{
-        //    Console.WriteLine("Hit and run");
-        //}
-
-    }
-    class combatship : Spaceship
-    {
-        public override void LaserHit()
-        {
-            Console.WriteLine("Less Damage!!!");
-            //base.LaserHit();
-            //less damage
-        }
-    }
+  
+   
   
     class foo
     {
         static void ProcessSpaceship( Spaceship s)//passing a parameter of type spaceship to a function
         {
-           // s.LaserHit();
-            Console.WriteLine("destroy all space craft");
+            s.LaserHit();
+                //Console.WriteLine("destroy all space craft");
         }
     }
-    interface ISpaceship
-    {
-       void Laserhit();
-    };
-    class cargoship : ISpaceship//inherits ISpaceshp interface..
-        //basically does the same purpose as any other class that inherits from spaceship class
-    {
-      virtual public void LaserHit()
-        {
-            // throw new NotImplementedException();
-            Console.WriteLine("Cargo damged");
-        }
-    }
-    class AdvancedCombatship : combatship
-    {
-        //still using the interface ISpaceship...it is a child class of the combatship
-        override public void LaserHit()
-        {
-            //some code
-        }
-    }
+   
 }
