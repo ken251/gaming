@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Gaming
 {
-    interface INukeCombat
+    interface INukeCombat : ICombat
     {
+        void Nuke();
     }
 }

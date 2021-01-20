@@ -6,5 +6,7 @@ namespace Gaming
 {
     interface ICombat
     {
+        void ShootLaser();
+        void ShootMissle();
     }
 }

@@ -4,7 +4,20 @@ using System.Text;
 
 namespace Gaming
 {
-    class Flagship
+    class Flagship : ICombat, ICargo
     {
+        public void ShootLaser()
+        {
+            //some code
+        }
+        public void ShootMissle()
+        {
+            //some code
+        }
+        public void carrier()
+        {
+            //some code
+        }
+
     }
 }

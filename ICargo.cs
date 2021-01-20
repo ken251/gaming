@@ -6,5 +6,6 @@ namespace Gaming
 {
     interface ICargo
     {
+        void carrier();
     }
 }
