@@ -163,7 +163,7 @@ namespace Gaming
             catch(Exception e)// do this case of the error to be handled
             {
                 Console.WriteLine(e.Message);
-                throw new FatalGameException();// you'd make the constructor take some data too
+               // throw new FatalGameException();// you'd make the constructor take some data too
             }
             finally
             {
