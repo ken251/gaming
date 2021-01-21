@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Gaming
 {
     class Program
@@ -94,9 +95,9 @@ namespace Gaming
 
                 }
             }
-            catch// do this case of the error to be handled
+            catch(Exception e)// do this case of the error to be handled
             {
-                Console.WriteLine("you've entered the wrong command please check the type");
+                Console.WriteLine(e.Message);
             }
             finally
             {
