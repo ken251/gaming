@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
 
 
 namespace Gaming
@@ -99,8 +100,45 @@ namespace Gaming
                 q.Enqueue(10);//10
                 q.Enqueue(20);//10,20
                 q.Enqueue(30);//10,20,30
-                //looking at the top of the queue
-                int t = (int)q.Peek(); //10
+               
+                int t = (int)q.Peek(); //10 -looking at the top of the queue
+
+                //or look and remove the top
+                t = (int)q.Dequeue();// 10, q= 20,30
+                //creqting a stack
+                Stack st =new Stack();
+                st.Push(10);
+                st.Push(20);
+                st.Push(30);
+                st.Push(40);
+                st.Push(50);//10,20,30,40,50
+
+                int xs = (int)st.Peek();//top is the last element entered 
+
+                //or look and remove the top
+
+                xs = (int)st.Pop();//50 is removed
+                xs = (int)st.Pop();//40 is removed
+                xs = (int)st.Pop();//30 is removed
+                xs = (int)st.Pop();//20 is removed
+                xs = (int)st.Pop();//10 is removed
+                xs = (int)st.Pop();//st is empty
+
+                FileStream file;//FileStream object
+              
+                
+                // write some stuff to a file            
+                file = File.OpenWrite("blah.txt");
+                //<perform the write operation here>
+                file.Close();
+
+                //now read the data back in:
+                file = File.OpenRead("blah.txt");
+                //<perform read operation on it here>
+                file.Close();
+
+
+
 
                 /* myDelegate d;
                  d = new myDelegate(Spaceship.InitializeShips);
