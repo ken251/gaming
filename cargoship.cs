@@ -7,10 +7,12 @@ namespace Gaming
     class cargoship : ISpaceship //inherits ISpaceshp interface..
                                  //basically does the same purpose as any other class that inherits from spaceship class
     {
-        virtual public void spacelaser()
+        public delegate void myDelegate();
+         public void spacelaser()
         {
             // throw new NotImplementedException();
             Console.WriteLine("Cargo from interface has been hit and damged");
         }
+      
     }
 }

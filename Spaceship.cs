@@ -4,12 +4,16 @@ using System.Text;
 
 namespace Gaming
 {
-    abstract public class Spaceship
+    public class Spaceship 
     {
-        abstract public void LaserHit();
-        //{
-        //    Console.WriteLine("Hit and run");
-        //}
+        public static void InitializeShips()
+        {
+            //imitialize all spaceships in the here
+        }
+        public void LaserHit()
+        {
+            Console.WriteLine("Hit and run");
+        }
 
     }
 }

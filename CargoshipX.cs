@@ -7,7 +7,7 @@ namespace Gaming
 
     class CargoshipX : cargoship
     {
-        public override void spacelaser()
+        public void spacelaser()
         {
             base.spacelaser();
         }

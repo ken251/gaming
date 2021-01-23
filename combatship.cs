@@ -6,7 +6,7 @@ namespace Gaming
 {
     class combatship : Spaceship
     {
-        public override void LaserHit()
+        public void LaserHit()
         {
             Console.WriteLine("Combat has less Damage...keep fighting,fire...light em up!!!");
             //base.LaserHit();
