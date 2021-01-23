@@ -72,13 +72,43 @@ namespace Gaming
                 {
                     //element is of type Spaceship
                 }
-                
+                Spaceship a = list[2] as Spaceship;//if is of type spaceship then holds ref for spaceship object elde null
+
+                //creating hash tables 
+                Hashtable table = new Hashtable();
+
+                //store some data in the table:
+                table["pi"] = 3.14159;
+                table["e"] = 2.71828;
+                table["fourty-two"] = 42.0;
+
+                //retrieving some data 
+                object d;
+                d = table["e"];
+                d = table["fourty-two"];
+                d = table["pi"];
+
+                //to remove an entry from rthe table 
+                bool bv;
+                bv = table.Contains("pi"); //true
+                table.Remove("pi");
+                bv = table.Contains("pi");//false
+
+                //creatin a queue
+                Queue q = new Queue();
+                q.Enqueue(10);//10
+                q.Enqueue(20);//10,20
+                q.Enqueue(30);//10,20,30
+                //looking at the top of the queue
+                int t = (int)q.Peek(); //10
+
                 /* myDelegate d;
                  d = new myDelegate(Spaceship.InitializeShips);
                  d();*///will work on delegates lster on sd time goes on
                 for (int z = 0; z < 4; z++)
                 {
                     string laser;
+                   // Console.WriteLine(list);
                     Console.WriteLine("hit cargo, hit, destro,trial....Shoot your short: ");
                     laser = Console.ReadLine();
                     laser = laser.ToUpper();
