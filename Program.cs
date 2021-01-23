@@ -122,11 +122,9 @@ namespace Gaming
                 xs = (int)st.Pop();//30 is removed
                 xs = (int)st.Pop();//20 is removed
                 xs = (int)st.Pop();//10 is removed
-                xs = (int)st.Pop();//st is empty
+              //  xs = (int)st.Pop();//st is empty
 
-                FileStream file;//FileStream object
-              
-                
+                FileStream file;//FileStream object                             
                 // write some stuff to a file            
                 file = File.OpenWrite("blah.txt");
                 //<perform the write operation here>
@@ -136,6 +134,33 @@ namespace Gaming
                 file = File.OpenRead("blah.txt");
                 //<perform read operation on it here>
                 file.Close();
+
+                FileStream file1;
+                StreamWriter writer;
+                file1 = File.OpenWrite("blah.txt");
+
+                //create a writer here with that file1
+
+                Console.WriteLine("Please enter text to your blah file");
+                writer = new StreamWriter(file1);
+                writer.WriteLine(Console.ReadLine());
+                writer.WriteLine(542);
+                writer.Close();
+
+                //reading in the text file
+                StreamReader reader;
+                file1 = File.OpenRead("blah.txt");
+
+                //create a reader with that fie
+                reader = new StreamReader(file1);
+
+                string str;
+                str = reader.ReadLine();//"Hello all you happy people"
+                str = reader.ReadLine();//"542"
+                int con = Int32.Parse(str);//convert the value to integer
+                reader.Close();
+                Console.WriteLine(str);
+
 
 
 
