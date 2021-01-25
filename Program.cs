@@ -166,10 +166,20 @@ namespace Gaming
                 //pseudo-randoms aren't  as random,it is just to you and me
                 int h = rn.Next(); //should hold 1559595546
                 Random rs = new Random(0);
-                int g = rs.Next(); //should hold 1559595546
 
+                for (int l=0; l < 6; l++)
+                {                 
+                  
+                    int g = rs.Next();
+                    Console.WriteLine(g);
+
+                }
                 Random se = new Random();//in this case the system provides  a seed for you based in the current time;
 
+                //generting a rndom array of numbers
+                byte[] B = new byte[10];
+                rs.NextBytes(B);
+                Console.WriteLine();
 
 
 
