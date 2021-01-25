@@ -161,6 +161,15 @@ namespace Gaming
                 reader.Close();
                 Console.WriteLine(str);
 
+                //creating random numbers
+                Random rn = new Random(0);//the integer passed is called a seed value
+                //pseudo-randoms aren't  as random,it is just to you and me
+                int h = rn.Next(); //should hold 1559595546
+                Random rs = new Random(0);
+                int g = rs.Next(); //should hold 1559595546
+
+                Random se = new Random();//in this case the system provides  a seed for you based in the current time;
+
 
 
 
