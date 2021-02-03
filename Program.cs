@@ -109,7 +109,7 @@ namespace Gaming
                 Stack st =new Stack();
                 st.Push(10);
                 st.Push(20);
-                st.Push(30);
+                st.Push(30);    
                 st.Push(40);
                 st.Push(50);//10,20,30,40,50
 
