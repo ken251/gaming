@@ -32,7 +32,7 @@ namespace Gaming
                 b = list.Contains(10);//false
                 x = list.IndexOf(90); //0
                 x = list.IndexOf(30);//3
-
+                bool keend;
                 //removing elements
                 list.Remove(30); // 90,20,60,40
                 list.RemoveAt(0);//20,60,40
